@@ -1,4 +1,7 @@
-import home from './home';
-import './style.css';
+import home from './home.js';
+
+const content = document.getElementById('content');
 
 home();
+
+export { content };

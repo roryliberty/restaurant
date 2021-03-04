@@ -1,29 +1,45 @@
 /******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ([
-/* 0 */,
+/* 0 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "content": () => (/* binding */ content)
+/* harmony export */ });
+/* harmony import */ var _home_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
+
+
+const content = document.getElementById('content');
+
+(0,_home_js__WEBPACK_IMPORTED_MODULE_0__.default)();
+
+
+
+/***/ }),
 /* 1 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-let home = () => {
-    let content = document.getElementById('content');
-    let title = document.createElement('h1');
-    title.innerHTML = 'One Guy\'s Fungi';
-    content.appendChild('title');
+/* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(0);
+
+
+function home() {
+    const headline = document.createElement('h1');
+    headline.innerHTML = 'One Guy\'s Fungi';
+    _index__WEBPACK_IMPORTED_MODULE_0__.content.appendChild(headline);
+
+    const motto = document.createElement('h2');
+    motto.innerHTML = 'Where Time Travel is Tasty!';
+    _index__WEBPACK_IMPORTED_MODULE_0__.content.appendChild(motto);
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (home);
 
-
-/***/ }),
-/* 2 */
-/***/ (() => {
-
-throw new Error("Module parse failed: Unexpected token (1:5)\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\n> body {\n|     display: flex;\n|     flex-direction: column;");
 
 /***/ })
 /******/ 	]);
@@ -52,18 +68,6 @@ throw new Error("Module parse failed: Unexpected token (1:5)\nYou may need an ap
 /******/ 	}
 /******/ 	
 /************************************************************************/
-/******/ 	/* webpack/runtime/compat get default export */
-/******/ 	(() => {
-/******/ 		// getDefaultExport function for compatibility with non-harmony modules
-/******/ 		__webpack_require__.n = (module) => {
-/******/ 			var getter = module && module.__esModule ?
-/******/ 				() => (module['default']) :
-/******/ 				() => (module);
-/******/ 			__webpack_require__.d(getter, { a: getter });
-/******/ 			return getter;
-/******/ 		};
-/******/ 	})();
-/******/ 	
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
 /******/ 		// define getter functions for harmony exports
@@ -93,19 +97,11 @@ throw new Error("Module parse failed: Unexpected token (1:5)\nYou may need an ap
 /******/ 	})();
 /******/ 	
 /************************************************************************/
-var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be in strict mode.
-(() => {
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _home__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
-/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
-/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_style_css__WEBPACK_IMPORTED_MODULE_1__);
-
-
-
-(0,_home__WEBPACK_IMPORTED_MODULE_0__.default)();
-})();
-
+/******/ 	
+/******/ 	// startup
+/******/ 	// Load entry module and return exports
+/******/ 	// This entry module is referenced by other modules so it can't be inlined
+/******/ 	var __webpack_exports__ = __webpack_require__(0);
+/******/ 	
 /******/ })()
 ;
