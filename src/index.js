@@ -1,7 +1,3 @@
-import home from './home.js';
+import loadPage from './load-page';
 
-const content = document.getElementById('content');
-
-home();
-
-export { content };
+loadPage();

@@ -1,23 +1,7 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ([
-/* 0 */
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "content": () => (/* binding */ content)
-/* harmony export */ });
-/* harmony import */ var _home_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
-
-
-const content = document.getElementById('content');
-
-(0,_home_js__WEBPACK_IMPORTED_MODULE_0__.default)();
-
-
-
-/***/ }),
+/* 0 */,
 /* 1 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -25,21 +9,61 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(0);
+function createHeader() {
+    const header = document.createElement('header');
+    header.className = 'header';
 
+    const homeBtn = createBtn('home', 'Home');
+    header.appendChild(homeBtn);
 
-function home() {
-    const headline = document.createElement('h1');
-    headline.innerHTML = 'One Guy\'s Fungi';
-    _index__WEBPACK_IMPORTED_MODULE_0__.content.appendChild(headline);
+    const aboutBtn = createBtn('about', 'About');
+    header.appendChild(aboutBtn);
 
-    const motto = document.createElement('h2');
-    motto.innerHTML = 'Where Time Travel is Tasty!';
-    _index__WEBPACK_IMPORTED_MODULE_0__.content.appendChild(motto);
+    const menuBtn = createBtn('menu', 'Menu');
+    header.appendChild(menuBtn);
+
+    return header;
 }
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (home);
+function createBtn(id, text) {
+    const btn = document.createElement('button');
+    btn.id = id;
+    btn.className = 'tab';
 
+    const span = document.createElement('span');
+    span.textContent = text;
+
+    btn.appendChild(span);
+
+    return btn;
+}
+
+function createMain() {
+    const main = document.createElement('div');
+    main.id = 'main';
+
+    const name = document.createElement('h1');
+    name.innerText = 'One Guy\'s Fungi';
+    main.appendChild(name);
+
+    const tagline = document.createElement('h2');
+    tagline.innerText = 'Where Time Travel is Tasty';
+    main.appendChild(tagline);
+
+    return main;
+}
+
+function loadPage() {
+    const content = document.getElementById('content');
+
+    const header = createHeader();
+    content.appendChild(header);
+
+    const main = createMain();
+    content.appendChild(main);
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (loadPage);
 
 /***/ })
 /******/ 	]);
@@ -97,11 +121,15 @@ function home() {
 /******/ 	})();
 /******/ 	
 /************************************************************************/
-/******/ 	
-/******/ 	// startup
-/******/ 	// Load entry module and return exports
-/******/ 	// This entry module is referenced by other modules so it can't be inlined
-/******/ 	var __webpack_exports__ = __webpack_require__(0);
-/******/ 	
+var __webpack_exports__ = {};
+// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
+(() => {
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _load_page__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
+
+
+(0,_load_page__WEBPACK_IMPORTED_MODULE_0__.default)();
+})();
+
 /******/ })()
 ;
