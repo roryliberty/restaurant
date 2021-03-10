@@ -30,6 +30,7 @@ function createBtn(id, text) {
 function createMain() {
     const main = document.createElement('div');
     main.id = 'main';
+    main.classList.add('active');
 
     const name = document.createElement('h1');
     name.innerText = 'One Guy\'s Fungi';

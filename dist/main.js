@@ -41,6 +41,7 @@ function createBtn(id, text) {
 function createMain() {
     const main = document.createElement('div');
     main.id = 'main';
+    main.classList.add('active');
 
     const name = document.createElement('h1');
     name.innerText = 'One Guy\'s Fungi';
@@ -64,6 +65,38 @@ function loadPage() {
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (loadPage);
+
+/***/ }),
+/* 2 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+function createAbout() {
+    const active = document.querySelector('.active');
+    active.className = '';
+
+    const about = document.createElement('div');
+    about.id = 'about';
+    about.classList.add('active');
+
+    const words = document.createElement('h2');
+    words.innerText = 'This is the About page.';
+    about.appendChild(words);
+
+    return about;
+}
+
+function showAbout() {
+    const content = document.getElementById('content');
+    const about = createAbout();
+
+    content.appendChild(about);
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (showAbout);
 
 /***/ })
 /******/ 	]);
@@ -126,9 +159,25 @@ var __webpack_exports__ = {};
 (() => {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _load_page__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
+/* harmony import */ var _about_page__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
 
 
-(0,_load_page__WEBPACK_IMPORTED_MODULE_0__.default)();
+
+init();
+
+function switchPage() {
+    const homeBtn = document.getElementById('home');
+    const aboutBtn = document.getElementById('about');
+    const menuBtn = document.getElementById('menu');
+
+    homeBtn.addEventListener('click', _load_page__WEBPACK_IMPORTED_MODULE_0__.default);
+    aboutBtn.addEventListener('click', _about_page__WEBPACK_IMPORTED_MODULE_1__.default);
+}
+
+function init() {
+    (0,_load_page__WEBPACK_IMPORTED_MODULE_0__.default)();
+    switchPage();
+}
 })();
 
 /******/ })()
