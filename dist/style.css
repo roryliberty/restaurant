@@ -19,7 +19,7 @@ h2 {
     color: #faa803;
 }
 .active {
+    position: absolute;
     border-style: solid; !important;
     border-color: white; !important;
-
 }

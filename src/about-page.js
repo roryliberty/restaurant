@@ -1,6 +1,5 @@
 function createAbout() {
-    const active = document.querySelector('.active');
-    active.className = '';
+
 
     const about = document.createElement('div');
     about.id = 'about';

@@ -41,7 +41,7 @@ function createBtn(id, text) {
 function createMain() {
     const main = document.createElement('div');
     main.id = 'main';
-    main.classList.add('active');
+
 
     const name = document.createElement('h1');
     name.innerText = 'One Guy\'s Fungi';
@@ -75,8 +75,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 function createAbout() {
-    const active = document.querySelector('.active');
-    active.className = '';
+
 
     const about = document.createElement('div');
     about.id = 'about';
